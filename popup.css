@@ -1,0 +1,123 @@
+:root {
+  font-size: 14px;
+
+  --main-family: 'Roboto', sans-serif;
+  --second-family: 'Roboto Slab', serif;
+  --icon-family: "Font Awesome 6 Free";
+
+  --color-black: #1B2430;
+  --color-gray: #1B2430;
+  --color-lightgray: #dfdede;
+
+  --color-blue: #3D72E1;
+  --color-lightblue: #E4EDFF;
+
+  --color-red: #FC5361;
+  --color-lightred: #FEDEE0;
+
+  --color-purple: #705BCF;
+  --color-lightpurple: #EAE7F8;
+
+  --color-golden: #FFC003;
+  --color-lightgolden: #f8ecc6;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 250px;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  padding-right: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray);
+  border-radius: 4px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  font-size: .9em;
+}
+
+.buttons button {
+  background-color: var(--color-golden);
+  padding: 5px 7px;
+  transition: all .4s ease-in;
+}
+
+
+
+.buttons button:hover {
+  color: white;
+  background-color: var(--color-black);
+}
+
+button {
+  font-family: var(--second-family);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#miniCourses {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+#miniCourses .course-card {
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--second-family);
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.course-card h3 {
+  margin: 4px auto;
+}
+
+.course-card .data {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  
+}
+
+#miniCourses .course-card:nth-child(odd) {
+  background-color: var(--color-red);
+
+}
+ 
+#miniCourses .course-card:nth-child(even) {
+  background-color: var(--color-blue);
+}
+
+#miniCourses .course-card:last-child {
+  margin-bottom: 0px;
+}
+
+

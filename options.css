@@ -1,0 +1,455 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --main-family: 'Roboto', sans-serif;
+    --second-family: 'Roboto Slab', serif;
+    --icon-family: "Font Awesome 6 Free"
+
+    --color-black: #1B2430;
+    --color-gray: #1B2430;
+    --color-lightgray: #dfdede;
+
+    --color-blue: #3D72E1;
+    --color-lightblue: #E4EDFF;
+
+    --color-red: #FC5361;
+    --color-lightred: #FEDEE0;
+
+    --color-purple: #705BCF;
+    --color-lightpurple: #EAE7F8;
+
+    --color-golden: #FFC003;
+    --color-lightgolden: #f8ecc6;
+
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    overflow-y: hidden;
+
+}
+
+h1,h2,h3,h4,h5 {
+    color: var(--color-black);
+    font-family: var(--second-family);
+}
+
+p {
+    color: var(--color-gray);
+}
+
+.center {
+    text-align: center;
+    display: block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-family: var(--second-family);
+    font-weight: bolder;
+    color: inherit;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+#mainLogo {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    margin: auto 7%;
+    
+}
+
+.icon {
+    font-style: normal;
+    display: block;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: white;
+    transition: all ease .5s;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transition: all ease .5s;
+    color: var(--color-lightblue);
+    transform: rotate(180deg) scale(1.1);
+}
+
+.iconb::before {
+    content: attr(data-icon);
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 5px;
+    font-size: 1.2rem;
+    
+}
+
+.icona::before {
+    content: attr(data-icon);
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+#mainLogo img {
+    height: 40px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px 7%;
+}
+
+.main-container > div:first-child {
+    width: 67%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.main-container > div:first-child::-webkit-scrollbar {
+    width: 5px;
+    padding-right: 2px;
+}
+
+.main-container > div:first-child::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 4px;
+}
+
+/* TIMES STYLES */
+
+.schedule-time-container > div {
+    padding-top: 10vh;
+    height: 10vh;
+    font-size: .65rem;
+    text-align: left;
+    font-style: italic;
+}
+
+.schedule-time-container h3 {
+    margin: 0;
+}
+
+/* SCHEDULE CONTAINER */
+
+.schedule-container {
+    width: 90%;
+    border: 2px solid var(--color-lightgray);
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10vh 160vh;
+    text-align: center;
+    
+}
+
+.schedule-header {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-lightgray);
+    border-right: 2px solid var(--color-lightgray);
+}
+
+.schedule-header:nth-child(6) {
+    border-right: none;
+}
+
+.schedule-content {
+    position: relative;
+}
+
+.schedule-content > * {
+    width: 100%;
+    position: absolute;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    /* color: var(--color-red);
+    background-color: var(--color-lightred);*/
+    border-left: 3px solid;
+    /* border-color: var(--color-red);   */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* top: 10%; */
+    
+}
+
+.schedule-content h3 {
+    color: inherit;
+    line-height: .8rem;
+}
+
+.schedule-content .teacher {
+    font-size: .9rem;
+    line-height: .55rem;
+}
+
+.schedule-content .data {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+/* SCHEDULE LIST */
+
+.list-container {
+    width: 30%;
+    height: 80vh;
+    border: 2px solid var(--color-lightgray);
+    border-radius: 2px;
+    padding: 10px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.list-container::-webkit-scrollbar {
+    width: 5px;
+    padding-right: 2px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 4px;
+}
+
+.list-container .title {
+    font-size: 1.1rem;
+    padding-bottom: 2px;
+    margin: 2px 2px 5px 2px;
+    color: white;
+    background-color: var(--color-golden);
+}
+
+.list-course-card {
+    padding: 2px 5%;
+    margin: auto;
+    /* background-color: var(--color-lightgolden); */
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.list-course-card h3, .schedule-content > * h3 {
+    margin: 2px;
+}
+
+.list-course-card .teacher, .schedule-content > * .teacher {
+    margin: 2px;
+}
+
+.list-course-card .data {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0px 5%;
+}
+
+.list-course-card .more {
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    transition: all .3s ease-in;
+}
+
+.list-course-card .more i {
+    display: block;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.list-course-card .more .toggle-more:hover {
+    transform: scale(1.1);
+    color: rgb(233, 233, 233);
+}
+
+.list-course-card .more .toggle-content{
+    display: none;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Font Awesome 6 Free';
+    font-size: .95rem;
+
+}
+
+.list-course-card .more:hover .toggle-content{
+    display: block;
+}
+
+#addCourseButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#addCourseButton.active {
+    height: fit-content;
+    min-width: 450px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#addCourseButton.active::-webkit-scrollbar {
+    width: 5px;
+    padding-right: 2px;
+}
+
+#addCourseButton.active::-webkit-scrollbar-thumb {
+    background-color: var(--color-lightblue);
+    border-radius: 4px;
+  }
+
+#addCourseButton .hide-form {
+    width: 80%;
+    display: none;
+    padding: 20px 0px;
+}
+
+#addCourseButton.active .hide-form {
+    display: block;
+    max-height: 80vh;
+    
+}
+
+.hide-form > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.hide-form > div, .hide-form > fieldset{
+    color: white;
+    
+}
+
+.hide-form input {
+    border: 2px dashed  white;
+    border-radius: 4px;
+}
+
+#addCourseButton.active .icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transform: rotate(45deg);
+}
+
+input[type="button"] {
+    padding: 7px 12px;
+    margin: 10px 0px;
+    border: none;
+    background-color: var(--color-black);
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+
+input[type="button"]:hover {
+    color: var(--color-black);
+    background-color: white;
+}
+
+#addTime.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.schedule-grid {
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: 80vh;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: rgb(243, 208, 112);
+    flex-direction: column;
+}
+
+.title-grid {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.course2-grid {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(218, 162, 60);
+}
+
+.course-grid {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(218, 162, 60);
+    /* top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%); */ 
+}
+
+.course-form {
+    width: 50%;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+}
+

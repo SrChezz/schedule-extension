@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700;900&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/UC128.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="options.css">
+
+    <title> Generador de Horarios</title>
+  </head>
+  <body>
+
+    <div id="mainLogo">
+      <h1 class="uppercase iconb" data-icon="">Organiza tu horario</h1>
+      <img src="./images/logo.svg" alt="">
+    </div>
+    
+    <section class="main-container">
+
+      <div>
+        <div class="schedule-time-container">
+          <div>
+            <h3>7:00 AM</h3>
+          </div>
+          <div>
+            <h3>8:00 AM</h3>
+          </div>
+          <div>
+            <h3>9:00 AM</h3>
+          </div>
+          <div>
+            <h3>10:00 AM</h3>
+          </div>
+          <div>
+            <h3>11:00 AM</h3>
+          </div>
+          <div>
+            <h3>12:00</h3>
+          </div>
+          <div>
+            <h3>1:00 PM</h3>
+          </div>
+          <div>
+            <h3>2:00 PM</h3>
+          </div>
+          <div>
+            <h3>3:00 PM</h3>
+          </div>
+          <div>
+            <h3>4:00 PM</h3>
+          </div>
+          <div>
+            <h3>5:00 PM</h3>
+          </div>
+          <div>
+            <h3>6:00 PM</h3>
+          </div>
+          <div>
+            <h3>7:00 PM</h3>
+          </div>
+          <div>
+            <h3>8:00 PM</h3>
+          </div>
+          <div>
+            <h3>9:00 PM</h3>
+          </div>
+          <div>
+            <h3>10:00 PM</h3>
+          </div>
+        </div>
+        <div class="schedule-container">
+
+
+          <div class="schedule-header">
+            <h3>Lunes</h3>
+          </div>
+          <div class="schedule-header">
+            <h3>Martes</h3>
+          </div>
+          <div class="schedule-header">
+            <h3>Miercoles</h3>
+          </div>
+          <div class="schedule-header">
+            <h3>Jueves</h3>
+          </div>
+          <div class="schedule-header">
+            <h3>Viernes</h3>
+          </div>
+          <div class="schedule-header">
+            <h3>Sabado</h3>
+          </div>
+  
+          
+          <div class="schedule-content">
+  
+            <!-- <div>
+  
+              <span class="uppercase center">09:10 - 10:50</span>
+              <div>
+                <h3>Laboratorio de Innovación</h3>
+                <span class="italic teacher">Ponce Calderon, Anghely Mabel</span>
+              </div>
+              <div class="data">
+                <span class="uppercase">20945</span>
+                <span class="uppercase">1 Cred</span>
+              </div>
+  
+            </div> -->
+          </div>
+          <div class="schedule-content">
+             
+          </div>
+          <div class="schedule-content">
+  
+          </div>
+          <div class="schedule-content">
+  
+          </div>
+          <div class="schedule-content">
+  
+          </div>
+          <div class="schedule-content">
+  
+          </div>
+  
+        </div>
+      </div>
+     
+
+      <div class="list-container">
+
+        <div class="list-categories">
+          <div class="list-categories-header">
+            <h2 class="title uppercase iconb" data-icon=""> Cursos</h2>
+          </div>
+        </div>
+
+        <div class="list-course-card">
+          <div class="more">
+            <i class="icona toggle-more" data-icon=""></i>
+            <i class="toggle-content toggle-content-see" data-nrc="123"></i>
+            <i class="toggle-content"></i>
+            <i class="toggle-content toggle-content-delete"></i>
+          </div>
+          
+          <span class="uppercase center">09:10 - 10:50</span>
+          
+
+          <div>
+            <h3>Laboratorio de Innovación</h3>
+            <span class="italic teacher">Ponce Calderon, Anghely Mabel</span>
+          </div>
+          
+          <div class="data">
+            <span class="uppercase">20945</span>
+            <span class="uppercase">1 Cred</span>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <form id="addCourseButton" class="" >
+
+      <div class="hide-form">
+
+        <div>
+          <label for="courseTitle" class="uppercase">Nombre del Curso</label>
+          <input type="text" name="courseTitle" id="courseTitle">
+        </div>
+        
+        <div>
+          <label for="courseTitle" class="uppercase">Profesor del Curso</label>
+          <input type="text" name="courseTeacher" id="courseTeacher">
+        </div>
+
+        <div>
+          <label for="courseTitle" class="uppercase">NRC del Curso</label>
+          <input type="text" name="courseNRC" id="courseNRC">
+        </div>
+        
+        <div>
+          <label for="courseTitle" class="uppercase">Creditos del Curso</label>
+          <input type="number" id="courseCredits" name="courseCredits" 
+        min="0" max="5" value="3" step="1">
+        </div>
+
+        <div>
+          <input type="time" id="time1" name="time1"  min="07:00" max="23:00" value="07:00" required>
+
+          <input type="time" id="time2" name="time2" min="07:00" max="23:00" value="07:30" required>
+        </div>
+
+        <fieldset>
+          <legend class="uppercase">Días de clase</legend>
+
+          <input class="checked-day" type="checkbox" id="monday" name="monday" value="monday">
+          <label for="days" class="uppercase">Lunes</label> <br>
+
+          <input class="checked-day" type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+          <label for="tuesday" class="uppercase">Martes</label><br>
+
+          <input class="checked-day" type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+          <label for="wednesday" class="uppercase">Miercoles</label><br>
+
+          <input class="checked-day" type="checkbox" id="thursday" name="thursday" value="thursday">
+          <label for="thursday" class="uppercase">Jueves</label><br>
+
+          <input class="checked-day" type="checkbox" id="friday" name="friday" value="friday">
+          <label for="friday" class="uppercase">Viernes</label><br>
+          
+          <input class="checked-day" type="checkbox" id="saturday" name="saturday" value="saturday">
+          <label for="saturday" class="uppercase">Sabado</label><br>
+        </fieldset>
+
+        <div class="buttons-container">
+          <input class="uppercase" type="button" name="addTime" id="addTime" value="Otro horario">
+          <input class="uppercase" type="button" name="button" id="saveCourse" value="Guardar">
+        </div>
+
+
+        
+        
+      </div>
+      
+
+      <i class="icon">+</i>
+    </form>
+
+  <script src="options.js"></script>
+</html>

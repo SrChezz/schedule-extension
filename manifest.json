@@ -1,0 +1,26 @@
+{
+  "name": "Generador de Horarios",
+  "description": "Genera tus horarios con un solo click",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/UC16.png",
+      "32": "/images/UC32.png",
+      "48": "/images/UC48.png",
+      "128": "/images/UC128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/UC16.png",
+    "32": "/images/UC32.png",
+    "48": "/images/UC48.png",
+    "128": "/images/UC128.png"
+  },
+  "options_page": "options.html"
+}
